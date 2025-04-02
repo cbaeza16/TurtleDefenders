@@ -44,5 +44,11 @@ TagManager:
   - name: AboveTileMap
     uniqueID: 1620229439
     locked: 0
+  - name: GameIcons
+    uniqueID: 4194638739
+    locked: 0
+  - name: Logo
+    uniqueID: 1422379115
+    locked: 0
   m_RenderingLayers:
   - Default
