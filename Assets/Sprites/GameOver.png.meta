@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9060c0770d2978488a9bd139700472c
+guid: ad16ade7bb50cbe4aaf63679ec76592f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7568593479449575091
-    second: WhatsApp Image 2025-04-01 at 9.45.36 PM_0
+      213: -6899527831451061053
+    second: GameOver_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WhatsApp Image 2025-04-01 at 9.45.36 PM_0
+      name: GameOver_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 107
         y: 0
-        width: 1024
-        height: 1024
+        width: 795
+        height: 1019
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3befdef5bab090960800000000000000
-      internalID: 7568593479449575091
+      spriteID: 3c430781ef3ff30a0800000000000000
+      internalID: -6899527831451061053
       vertices: []
       indices: 
       edges: []
@@ -134,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      WhatsApp Image 2025-04-01 at 9.45.36 PM_0: 7568593479449575091
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
