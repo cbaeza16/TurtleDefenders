@@ -8,15 +8,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform birdRotationPoint;
     [SerializeField] private LayerMask enemyMask;
 
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
+
     [Header("Attribute")]
-    [SerializeField] private float targetingRange = 3f;
+    [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
+    [SerializeField] private float bps = 1f; //Bullet por segundo
+
 
     private Transform target;
+    private float timeUntilFire;
 
-    private void Update()
+     private void Update()
     {
-        if (target != null)
+        if (target == null)
         {
             FindTarget();
             return;
@@ -24,16 +30,34 @@ public class PlayerMovement : MonoBehaviour
 
         RotateTowardsTarget();
 
-        if (!CheckTargetIsInRange())
-        {
-            target = null;
+        if (!CheckTargetIsInRange()) {
+            target=null;
         }
+        else {
+            timeUntilFire += Time.deltaTime;
+            if (timeUntilFire >= 1f / bps) {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+
+    }
+
+    private void Shoot() {
+
+        Debug.Log("Shoot");
+
+        GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+
+        Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        bulletScript.SetTarget(target);
+        
 
     }
 
     private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2) transform.position, 0f, enemyMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMask);
 
         if (hits.Length > 0)
         {
@@ -48,10 +72,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        float angle = Mathf.Atan2((target.position.y - transform.position.y), (target.position.x - transform.position.x)) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 180f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        birdRotationPoint.rotation = Quaternion.RotateTowards(birdRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        birdRotationPoint.rotation = targetRotation;
     }
 
     private void OnDrawGizmosSelected()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8612574002166652702}
   - component: {fileID: 8804069733048978577}
   - component: {fileID: 9220535966028483796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyRaccoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 5247907975955020472}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5158372731260789315}
   - component: {fileID: 3888790941027508437}
   - component: {fileID: 2564388394520160739}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: EnemyFox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1568899106880067308}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
