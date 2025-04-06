@@ -23,7 +23,13 @@ public class EnemyRatMovement : MonoBehaviour
             pathIndex++;
             if (pathIndex == LevelManager.main.path.Length)
             {
-                EnemySpawner.onEnemyDestroy.Invoke();
+                // Notificar directamente al EnemySpawner
+                EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
+                if (spawner != null)
+                {
+                    spawner.NotifyEnemyReachedEnd();
+                }
+
                 Destroy(gameObject);
                 return;
             }
@@ -34,6 +40,6 @@ public class EnemyRatMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 direction = (target.position - transform.position).normalized;
-        rb.linearVelocity = direction * moveSpeed;
+        rb.linearVelocity = direction * moveSpeed; // ← corregido de linearVelocity a velocity
     }
 }

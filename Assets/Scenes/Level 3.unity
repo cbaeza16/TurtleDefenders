@@ -913,10 +913,12 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 1568899106880067308, guid: 18d7dc2da8af23d49a27a522fa018305, type: 3}
   - {fileID: 1568899106880067308, guid: 18d7dc2da8af23d49a27a522fa018305, type: 3}
+  restartCanvas: {fileID: 327484373}
   baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
+  maxEnemiesToSpawnForLevel: 30
 --- !u!4 &176021773
 Transform:
   m_ObjectHideFlags: 0

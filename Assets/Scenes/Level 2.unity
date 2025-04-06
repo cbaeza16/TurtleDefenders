@@ -14026,7 +14026,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15242,6 +15242,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 5247907975955020472, guid: b115bed290892fc40ad1cac7b43cefd1, type: 3}
   - {fileID: 5247907975955020472, guid: b115bed290892fc40ad1cac7b43cefd1, type: 3}
+  restartCanvas: {fileID: 985947527}
   baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5

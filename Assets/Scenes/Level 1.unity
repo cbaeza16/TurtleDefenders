@@ -1173,7 +1173,7 @@ Transform:
   m_GameObject: {fileID: 184475329}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -304.12, y: -173.88, z: 0}
+  m_LocalPosition: {x: -863.0499, y: -478.83, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1816,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 256206631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -304.06, y: -170.92, z: 0}
+  m_LocalPosition: {x: -862.9899, y: -475.87, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2722,10 +2722,13 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2345798635976937906, guid: 97b121c424d4e2a40aed7fdc376524cb, type: 3}
   - {fileID: 2345798635976937906, guid: 97b121c424d4e2a40aed7fdc376524cb, type: 3}
+  restartCanvas: {fileID: 694584413}
   baseEnemies: 10
   enemiesPerSecond: 2
   timeBetweenWaves: 5
   difficultyScalingFactor: 1.5
+  maxEnemiesToSpawnForLevel: 10
+  winCanvas: {fileID: 0}
 --- !u!114 &454946184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7727,7 +7730,7 @@ Transform:
   m_GameObject: {fileID: 1252853390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -304.17, y: -173.95, z: 0}
+  m_LocalPosition: {x: -863.1, y: -478.9, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9107,7 +9110,7 @@ Transform:
   m_GameObject: {fileID: 1557224959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -304.06, y: -170.92, z: 0}
+  m_LocalPosition: {x: -862.9899, y: -475.87, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10245,7 +10248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1818353238
 MonoBehaviour:
   m_ObjectHideFlags: 0
