@@ -22,7 +22,7 @@ public class BuildManager : MonoBehaviour
     }
     
     public void SetSelectedBird(int _selectedBird) {
-        Debug.Log("CAMBIOOOOOO");
+        //Debug.Log("CAMBIOOOOOO");
         selectedBird = _selectedBird;
     }
 }

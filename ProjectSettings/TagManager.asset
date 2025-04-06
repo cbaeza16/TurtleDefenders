@@ -41,11 +41,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemap
+    uniqueID: 3359956471
+    locked: 0
   - name: AboveTileMap
     uniqueID: 1620229439
-    locked: 0
-  - name: Plot
-    uniqueID: 3624987055
     locked: 0
   - name: GameIcons
     uniqueID: 4194638739
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Buton
     uniqueID: 2132639103
+    locked: 0
+  - name: Plot
+    uniqueID: 3624987055
     locked: 0
   m_RenderingLayers:
   - Default
