@@ -34,12 +34,12 @@ public class Plot : MonoBehaviour
 
         Bird birdToBuild = BuildManager.main.GetSelectedBird();
 
-       // if (birdToBuild.cost > LevelManager.main.currency) {
-       //     Debug.Log("You cant afford this bird");
-        //    return;
-        //}
+        if (birdToBuild.cost > LevelManager.main.currency) {
+            Debug.Log("You cant afford this bird");
+            return;
+        }
 
-       // LevelManager.main.SpendCurrency(birdToBuild.cost);
+        LevelManager.main.SpendCurrency(birdToBuild.cost);
 
         bird = Instantiate(birdToBuild.prefab, transform.position, Quaternion.identity);
 
