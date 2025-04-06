@@ -6,7 +6,8 @@ public class BuildManager : MonoBehaviour
     public static BuildManager main;
 
     [Header("References")]
-    [SerializeField] private GameObject[] birdPrefabs;
+    //[SerializeField] private GameObject[] birdPrefabs;
+    [SerializeField] private Bird[] birds;
 
     private int selectedBird = 0;
 
@@ -15,9 +16,13 @@ public class BuildManager : MonoBehaviour
         main = this;
     }
 
-    public GameObject GetSelectedBird()
+    public Bird GetSelectedBird()
     {
-        return birdPrefabs[selectedBird];
+        return birds[selectedBird];
     }
     
+    public void SetSelectedBird(int _selectedBird) {
+        Debug.Log("CAMBIOOOOOO");
+        selectedBird = _selectedBird;
+    }
 }
