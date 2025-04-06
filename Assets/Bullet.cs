@@ -3,33 +3,30 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [Header("References")]
-    [SerializedField] private RigidBody2D rb;
+    [SerializeField] private Rigidbody2D rb;
+
     [Header("Attributes")]
-    [SerializedField] private float bulletSpeed = 5f;
-    public Transform target;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private int bulletDamage = 1; 
+
+    private Transform target;
+
+    public void SetTarget(Transform _target)
     {
-        
-    }
-
-    public vois SetTarget(Transform _target) {
         target = _target;
-
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
-        if(!target) return;
-        Vector2 direction = (target.position - transform.position).normalized;
+        if (!target) return;
 
-        rb.velocity = direction * bulletSpeed;
-
+        Vector2 direction = (target.position - transform.position).normalized; //((Vector2)target.position - rb.position).normalized;
+        rb.linearVelocity = direction * bulletSpeed;
     }
 
-    private void OnCollitionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
         Destroy(gameObject);
     }
 }

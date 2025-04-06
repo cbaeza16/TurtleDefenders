@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform birdRotationPoint;
     [SerializeField] private LayerMask enemyMask;
-
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
 
@@ -47,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.Log("Shoot");
 
-        GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
 
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
@@ -75,7 +74,8 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 180f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        birdRotationPoint.rotation = targetRotation;
+        //birdRotationPoint.rotation = targetRotation;
+        birdRotationPoint.rotation = Quaternion.RotateTowards(birdRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     private void OnDrawGizmosSelected()
