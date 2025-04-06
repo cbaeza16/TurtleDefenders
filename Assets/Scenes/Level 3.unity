@@ -919,6 +919,7 @@ MonoBehaviour:
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
   maxEnemiesToSpawnForLevel: 30
+  winCanvas: {fileID: 1092049493}
 --- !u!4 &176021773
 Transform:
   m_ObjectHideFlags: 0

@@ -15243,10 +15243,12 @@ MonoBehaviour:
   - {fileID: 5247907975955020472, guid: b115bed290892fc40ad1cac7b43cefd1, type: 3}
   - {fileID: 5247907975955020472, guid: b115bed290892fc40ad1cac7b43cefd1, type: 3}
   restartCanvas: {fileID: 985947527}
-  baseEnemies: 8
-  enemiesPerSecond: 0.5
-  timeBetweenWaves: 5
-  difficultyScalingFactor: 0.75
+  baseEnemies: 15
+  enemiesPerSecond: 1
+  timeBetweenWaves: 4
+  difficultyScalingFactor: 1.25
+  maxEnemiesToSpawnForLevel: 30
+  winCanvas: {fileID: 0}
 --- !u!4 &2109149366
 Transform:
   m_ObjectHideFlags: 0

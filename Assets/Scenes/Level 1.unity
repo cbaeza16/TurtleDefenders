@@ -2727,7 +2727,7 @@ MonoBehaviour:
   enemiesPerSecond: 2
   timeBetweenWaves: 5
   difficultyScalingFactor: 1.5
-  maxEnemiesToSpawnForLevel: 10
+  maxEnemiesToSpawnForLevel: 25
   winCanvas: {fileID: 0}
 --- !u!114 &454946184
 MonoBehaviour:
