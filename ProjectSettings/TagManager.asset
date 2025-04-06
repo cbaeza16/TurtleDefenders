@@ -53,5 +53,8 @@ TagManager:
   - name: Logo
     uniqueID: 1422379115
     locked: 0
+  - name: Buton
+    uniqueID: 2132639103
+    locked: 0
   m_RenderingLayers:
   - Default
